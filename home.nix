@@ -14,7 +14,6 @@ in
   home.homeDirectory = "/Users/p.katunina";
 
   home.packages = with pkgs; [
-    fish
     vim
     git
     coreutils
@@ -23,6 +22,7 @@ in
     jq
     shellcheck
     opentofu
+    wget
   ] ++ unstableInstalledPkgs;
 
   home.sessionVariables = {
@@ -46,5 +46,4 @@ provider_installation {
 
 # standalone installation
   home.stateVersion = "24.05"; 
-  programs.home-manager.enable = true;
 }

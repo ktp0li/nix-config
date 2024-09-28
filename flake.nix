@@ -42,15 +42,6 @@
 
     # my work macbook m2
     in {
-      homeConfigurations."p.katunina" = home-manager.lib.homeManagerConfiguration {
-        inherit pkgs;
-
-        modules = [ ./home.nix ];
-        extraSpecialArgs = {
-          unstablePkgs = unstablePkgs;
-        };
-      };
-
       darwinConfigurations."macbook-JJH19JJWV1" = nix-darwin.lib.darwinSystem {
         inherit pkgs;
 
@@ -77,7 +68,14 @@
               mutableTaps = false;
             };
           }
-         ];
+          home-manager.darwinModules.home-manager
+          {
+            home-manager.users."p.katunina" = import ./home.nix;
+            home-manager.extraSpecialArgs = {
+              unstablePkgs = unstablePkgs;
+            };
+          }
+        ];
       };
     };
 }

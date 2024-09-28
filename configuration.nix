@@ -14,6 +14,8 @@
 
   programs.fish.enable = true;
   users.users."p.katunina".shell = pkgs.fish;
+  users.users."p.katunina".home = "/Users/p.katunina";
+  security.pam.enableSudoTouchIdAuth = true;
 
   services.nix-daemon.enable = true;
   nix.package = pkgs.nix;
