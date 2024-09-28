@@ -28,10 +28,6 @@
       url = "github:homebrew/homebrew-bundle";
       flake = false;
     };
-    brew-src = {
-      url = "github:Homebrew/brew/4.3.0";
-      flake = false;
-    };
   };
 
   outputs = { nixpkgs, nixpkgsUnstable, home-manager, nix-darwin, nix-homebrew, homebrew-core, homebrew-cask, homebrew-bundle, ... }:

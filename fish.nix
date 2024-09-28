@@ -1,11 +1,9 @@
 { config, pkgs, ... }:
 {
-# fish is set to default shell via chsh -s ~/.nix-profile/bin/fish
   home.packages = with pkgs; [
     fish
-    grc
-    fishPlugins.grc
     zoxide
+    fzf
   ];
 
   programs.fish = {
@@ -16,7 +14,6 @@
       alias cd z
     '';
     plugins = [
-      {name = "grc"; src = pkgs.fishPlugins.grc;}
       {
         name = "tide";
         src = pkgs.fetchFromGitHub {

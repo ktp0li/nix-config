@@ -8,9 +8,16 @@
     global.autoUpdate = false;
 
     casks = [
-      "hiddenbar"
+      "hiddenbar" # <- hide icons in dock
+      "shottr" # <- screenshot tool
+      "domzilla-caffeine" # <- don't let mac fall asleep
     ];
   };
+
+  fonts.packages = with pkgs; [
+    jetbrains-mono
+    (nerdfonts.override { fonts = [ "JetBrainsMono"]; })
+  ];
 
   programs.fish.enable = true;
   users.users."p.katunina".shell = pkgs.fish;
