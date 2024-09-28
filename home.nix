@@ -6,14 +6,15 @@ unstableInstalledPkgs = with unstablePkgs; [
 in 
 {
   imports = [
-    ./fish.nix
     ./zellij.nix
+    ./fish.nix
   ];
 
   home.username = "p.katunina";
   home.homeDirectory = "/Users/p.katunina";
 
   home.packages = with pkgs; [
+    fish
     vim
     git
     coreutils
