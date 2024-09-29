@@ -8,6 +8,7 @@ in
   imports = [
     ./zellij.nix
     ./fish.nix
+    ./git.nix
   ];
 
   home.username = "p.katunina";
