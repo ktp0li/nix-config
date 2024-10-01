@@ -15,15 +15,19 @@ in
   home.homeDirectory = "/Users/p.katunina";
 
   home.packages = with pkgs; [
+    # basic utils
     vim
     git
     coreutils
-    colima
     curl 
     jq
-    shellcheck
-    opentofu
     wget
+
+    # devops tools
+    shellcheck
+    colima
+    opentofu
+    awscli
   ] ++ unstableInstalledPkgs;
 
   home.sessionVariables = {
