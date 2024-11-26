@@ -11,6 +11,8 @@
       "hiddenbar" # <- hide icons in dock
       "shottr" # <- screenshot tool
       "domzilla-caffeine" # <- don't let mac fall asleep
+      "docker"
+      "orcaslicer" # slicer for 3d models
     ];
   };
 

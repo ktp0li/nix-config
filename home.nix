@@ -2,6 +2,7 @@
 let 
 unstableInstalledPkgs = with unstablePkgs; [
   yandex-cloud
+  opentofu
 ];
 in 
 {
@@ -22,12 +23,17 @@ in
     curl 
     jq
     wget
+    darwin.iproute2mac # ip util wrapper for macos
+    libqalculate # advanced calculator
 
     # devops tools
     shellcheck
     colima
-    opentofu
     awscli
+    teleport
+
+   # programming
+    go
   ] ++ unstableInstalledPkgs;
 
   home.sessionVariables = {

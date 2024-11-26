@@ -5,7 +5,7 @@
   ];
 
   programs.zellij = {
-    enable = true;
+    enable = false;
     enableFishIntegration = true;
     settings = {
       theme = "nord";
