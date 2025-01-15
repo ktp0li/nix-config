@@ -12,8 +12,8 @@ in
     ./git.nix
   ];
 
-  home.username = "p.katunina";
-  home.homeDirectory = "/Users/p.katunina";
+  home.username = "pkatunina";
+  home.homeDirectory = "/Users/pkatunina";
 
   home.packages = with pkgs; [
     # basic utils

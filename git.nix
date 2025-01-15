@@ -19,7 +19,7 @@
             {
                 condition = "gitdir:~/work/";
                 contents.user = {
-                    email = "p.katunina@tbank.ru";
+                    email = "pkatunina@ozon.ru";
                 };
             }
         ];

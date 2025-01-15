@@ -38,7 +38,7 @@
 
     # my work macbook m2
     in {
-      darwinConfigurations."macbook-JJH19JJWV1" = nix-darwin.lib.darwinSystem {
+      darwinConfigurations."mbp-pkatunina-OZON-MDYQ17TY23" = nix-darwin.lib.darwinSystem {
         inherit pkgs;
 
         modules = [
@@ -52,7 +52,7 @@
             enableRosetta = true;
 
             # User owning the Homebrew prefix
-            user = "p.katunina";
+            user = "pkatunina";
 
             # Optional: Declarative tap management
             taps = {
@@ -66,7 +66,7 @@
           }
           home-manager.darwinModules.home-manager
           {
-            home-manager.users."p.katunina" = import ./home.nix;
+            home-manager.users.pkatunina = import ./home.nix;
             home-manager.extraSpecialArgs = {
               unstablePkgs = unstablePkgs;
             };

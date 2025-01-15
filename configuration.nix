@@ -10,9 +10,9 @@
     casks = [
       "hiddenbar" # <- hide icons in dock
       "shottr" # <- screenshot tool
-      "domzilla-caffeine" # <- don't let mac fall asleep
-      "docker"
-      "orcaslicer" # slicer for 3d models
+#     "docker"
+      "iterm2"
+      "visual-studio-code"
     ];
   };
 
@@ -22,8 +22,8 @@
   ];
 
   programs.fish.enable = true;
-  users.users."p.katunina".shell = pkgs.fish;
-  users.users."p.katunina".home = "/Users/p.katunina";
+  users.users.pkatunina.shell = pkgs.fish;
+  users.users.pkatunina.home = "/Users/pkatunina";
   security.pam.enableSudoTouchIdAuth = true;
 
   services.nix-daemon.enable = true;
