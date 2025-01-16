@@ -10,7 +10,8 @@
     casks = [
       "hiddenbar" # <- hide icons in dock
       "shottr" # <- screenshot tool
-#     "docker"
+      "docker"
+      "wireshark"
       "iterm2"
       "visual-studio-code"
     ];
