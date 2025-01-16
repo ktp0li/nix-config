@@ -2,11 +2,11 @@
   description = "ktp0li's dotfiles";
 
   inputs = {
-    nixpkgs.url = "github:nixos/nixpkgs/nixos-24.05";
+    nixpkgs.url = "github:nixos/nixpkgs/nixos-24.11";
     nixpkgsUnstable.url = "github:nixos/nixpkgs/nixpkgs-unstable";
 
     home-manager = {
-      url = "github:nix-community/home-manager/release-24.05";
+      url = "github:nix-community/home-manager/release-24.11";
       inputs.nixpkgs.follows = "nixpkgs";
     };
     
@@ -36,7 +36,7 @@
       pkgs = nixpkgs.legacyPackages.${system};
       unstablePkgs = import nixpkgsUnstable { system = system; config.allowUnfree = true; };
 
-    # my work macbook m2
+    # my work macbook m3 pro
     in {
       darwinConfigurations."mbp-pkatunina-OZON-MDYQ17TY23" = nix-darwin.lib.darwinSystem {
         inherit pkgs;
@@ -48,8 +48,7 @@
           nix-homebrew = {
             enable = true;
 
-            # Apple Silicon Only: Also install Homebrew under the default Intel prefix for Rosetta 2
-            enableRosetta = true;
+            enableRosetta = false;
 
             # User owning the Homebrew prefix
             user = "pkatunina";
