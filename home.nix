@@ -2,7 +2,6 @@
 let 
 unstableInstalledPkgs = with unstablePkgs; [
   yandex-cloud
-  opentofu
 ];
 in 
 {
@@ -28,31 +27,19 @@ in
 
     # devops tools
     shellcheck
-    colima
     awscli
     teleport
+    vault
+    tenv # terraform version management
 
    # programming
     go
+    python3
   ] ++ unstableInstalledPkgs;
+  nixpkgs.config.allowUnfree = true;
 
   home.sessionVariables = {
     EDITOR = "vim";
-  };
-
-# yandex mirrors for yc terraform provider
-  home.file.".tofurc" = {
-    text = ''
-provider_installation {
-  network_mirror {
-    url = "https://terraform-mirror.yandexcloud.net/"
-    include = ["registry.opentofu.org/*/*"]
-  }
-  direct {
-    exclude = ["registry.opentofu.org/*/*"]
-  }
-}   
-    '';
   };
 
 # standalone installation

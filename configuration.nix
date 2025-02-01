@@ -8,6 +8,7 @@
     global.autoUpdate = false;
 
     casks = [
+      "audacity"
       "hiddenbar" # <- hide icons in dock
       "shottr" # <- screenshot tool
       "docker"
